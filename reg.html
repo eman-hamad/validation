@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Registration</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <form  action="child_window.html" class="form_data" ">
+              <input type="text" id="name"  placeholder="enter your  name">
+              <input type="email" id="email" placeholder="enter your email">
+              <input type="password" id="passward" placeholder="enter your password">
+              <input type="text" id="title" placeholder="enter your job title">
+              <input type="tel" id="mobileNum" placeholder="enter yourmobile number">
+              <label for="male" >Male</label>
+              <input type="radio" id="gender "value="male">
+              <label for="femal">Female</label>
+              <input type="radio" id="gender" value="female">
+              <input type="text" id="address" placeholder="enter your addresse">
+               <input type="submit" value="send data"  name="Confirm"  onclick="setData()" >
+      
+            
+         </form> 
+      </div>
+    
+            
+    <script>
+        
+        function confirmButton(){
+        var myName =document.getElementById("name").value; 
+        var myEmail =document.getElementById("email").value; 
+        var myTitle =document.getElementById("title").value; 
+        var myMobile =document.getElementById("mobileNum").value; 
+        var myGender =document.getElementById("gender").value;
+        var myAddress =document.getElementById("address").value;
+        
+        localStorage.setItem('Name', myName);
+        localStorage.setItem('Email', myEmail);
+        localStorage.setItem('Title', myTitle);
+        localStorage.setItem('Mobile', myMobile);
+        localStorage.setItem('Gender', myGender);
+        localStorage.setItem('Address', myAddress);
+        
+        }
+       
+
+        function setData(){
+            confirmButton();
+            window.document.location = "welcomePage.html";
+        }
+
+
+        
+    </script> 
+        
+    
+   
+</body>
+</html>

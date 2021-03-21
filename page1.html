@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    
+    <body>
+        <h1 id="welcomeMessage"><b></b></h1>
+        <h4 id="welEmail"></h4>
+        <h4 id="welMobile"></h4>
+        <h4 id="welGender"></h4>
+        <h4 id="welAddress"></h4>
+
+        <script>
+
+             var welcomeMessage = document.getElementById("welcomeMessage");
+             var address = document.getElementById("welAddress");
+             var gender = document.getElementById("welGender");
+             var email = document.getElementById("welEmail");
+             var mobile = document.getElementById("welMobile");
+
+            welcomeMessage.innerHTML = "Welcome " + localStorage.getItem('Title') 
+            + " " + localStorage.getItem('Name');
+           
+            email.innerHTML = "email is: " +localStorage.getItem('Email');
+
+            mobile.innerHTML = " mobile number is: " + localStorage.getItem('Mobile');
+
+            gender.innerHTML = " gender is: " + localStorage.getItem('Gender');
+
+            address.innerHTML = " address is: " + localStorage.getItem('Address');
+            
+        </script>
+    </body>
+</html>
